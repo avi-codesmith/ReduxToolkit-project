@@ -14,7 +14,7 @@ const CartItem = (props) => {
   };
 
   const handleDecrement = () => {
-    dispatch(addToCartActions.removeFromCart(id));
+    dispatch(addToCartActions.removeFromCart({ id, price }));
   };
 
   return (
