@@ -41,7 +41,7 @@ const addToCartSlice = createSlice({
   },
 });
 
-const initialToggleCartState = { visibleCart: false };
+const initialToggleCartState = { visibleCart: false, notification: null };
 
 const toggleCartSlice = createSlice({
   name: "toggleCart",
@@ -49,6 +49,13 @@ const toggleCartSlice = createSlice({
   reducers: {
     toggleCart(state) {
       state.visibleCart = !state.visibleCart;
+    },
+    showNotification(state, action) {
+      state.notification = {
+        status: action.payload.status,
+        title: action.payload.title,
+        message: action.payload.message,
+      };
     },
   },
 });

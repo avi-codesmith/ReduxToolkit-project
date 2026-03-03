@@ -10,7 +10,7 @@ const CartButton = (props) => {
 
   const totalQuantity = useSelector((state) => state.addToCart.totalQuantity);
 
-  const toggleCartState = useSelector((state) => state.toggleCart);
+  const toggleCartState = useSelector((state) => state.toggleCart.visibleCart);
 
   const handleToggleCart = () => {
     dispatch(toggleCartActions.toggleCart());
